@@ -20,4 +20,15 @@ export default class Character {
         this.attack = undefined;
         this.defence = undefined;
     }
+
+    levelUp = function () {
+        if (this.health <= 0) {
+            throw new Error('Geme over, health <= 0');
+        } 
+        
+        this.level += 1;
+        this.attack = this.attack * 1.2;
+        this.defence = this.defence * 1.2;
+        this.health = 100;
+    }
 }

@@ -1,7 +1,8 @@
 import Character from '../Character';
 
 test('checking the Character', () => {
-  const character = {name: 'Oleg', type: 'Bowerman', health: 100, level: 1, levelUp: function () {
+  const character = {name: 'Oleg', type: 'Bowerman', health: 100, level: 1, attack: undefined, defence: undefined};
+  character.levelUp = function () {
     if (this.health <= 0) {
         throw new Error('Geme over, health <= 0');
       }
@@ -9,8 +10,7 @@ test('checking the Character', () => {
       this.attack = this.attack * 1.2;
       this.defence = this.defence * 1.2;
       this.health = 100;
-    }, attack: undefined, defence: undefined
-  };
+    }
   expect(new Character('Oleg', 'Bowerman')).toEqual(character);
 });
 

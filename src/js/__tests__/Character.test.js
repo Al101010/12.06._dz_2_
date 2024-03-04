@@ -10,7 +10,6 @@ test('checking the Character', () => {
 });
 
 test('Geme over, health <= 0', () => {
-  let characterBowermanOlga = new Bowerman('Olga');
   expect(() => {
     const characterBowermanOlga = new Bowerman('Olga');
     characterBowermanOlga.health = 0;

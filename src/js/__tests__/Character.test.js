@@ -10,9 +10,9 @@ test('checking the Character', () => {
 });
 
 test('Geme over, health <= 0', () => {
-  const characterBowerman_ = new Bowerman('Oleg');
+  const characterBowerman_ = new Bowerman('Olga');
   expect(() => {
-    const characterBowerman_ = new Bowerman('Oleg');
+    const characterBowerman_ = new Bowerman('Olga');
     characterBowerman_.health = 0;
     characterBowerman_.levelUp();
   }).toThrow('Geme over, health <= 0');

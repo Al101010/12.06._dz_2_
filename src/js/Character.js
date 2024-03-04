@@ -21,7 +21,7 @@ export default class Character {
         this.defence = undefined;
     }
 
-    levelUp = function () {
+    levelUp() {
         if (this.health <= 0) {
             throw new Error('Geme over, health <= 0');
         } 
